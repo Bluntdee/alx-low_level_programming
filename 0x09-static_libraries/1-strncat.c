@@ -1,49 +1,28 @@
-#include "main.h"
+include "main.h"
+#include <stdio.h>
 
 /**
-* _strncat - concatenate two strings
-* using at most n bytes from src
-* @dest: input value
-* @src: input value
-* @n: input value
-*
-* Return: dest
-*/
-
-char *_strncat(char *dest, char *src, int n)
-
+ * *_strchr - locates a character in a string
+ * @s: string to search
+ * @c: char to find
+ *
+ * Return: a pointer to the first occurrence of the character
+ * c in the string s, or NULL if the character is not found
+ */
+char *_strchr(char *s, char c)
 {
+		int a;
 
-	int i;
-
-	int j;
-
-	i = 0;
-
-	while (dest[i] != '\0')
-
-	{
-
-	i++;
-
-	}
-
-	j = 0;
-
-	while (j < n && src[j] != '\0')
-
-	{
-
-	dest[i] = src[j];
-
-	i++;
-
-	j++;
-
-	}
-
-	dest[i] = '\0';
-
-	return (dest);
-
-}
+		while (1)
+		{
+			a = *s++;
+			if (a == c)
+			{
+				return (s - 1);
+			}
+			if (a == 0)
+			{
+				return (NULL);
+			}
+		}
+}}
