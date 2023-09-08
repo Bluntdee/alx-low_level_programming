@@ -1,14 +1,15 @@
-#include <stdio.h>
+#include "main.h"
 #include <stdlib.h>
-#include <limits.h>
+
 /**
- * malloc_checked - allocates memory using malloc.
- * @b: number to blocks to be allocated
- * Return: Nothing
- */
+* *malloc_checked - a character to allocate malloc
+* @b: size of buffer
+* Return: point to buffer
+*
+*/
 void *malloc_checked(unsigned int b)
 {
-	int *p;
+	void *p;
 
 	p = malloc(b);
 	if (p == NULL)
